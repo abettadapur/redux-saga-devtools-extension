@@ -1,0 +1,32 @@
+{
+    "name": "Redux Saga Dev Tools",
+    "version": "0.0.2",
+    "description": "Redux saga dev tools",
+    "manifest_version": 2,
+    "devtools_page": "devtools.html",
+    "background": {
+        "scripts": [
+            "js/background.bundle.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "exclude_globs": [
+                "https://www.google*"
+            ],
+            "js": [
+                "js/content.bundle.js",
+                "js/pagewrap.bundle.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    "web_accessible_resources": [
+        "js/page.bundle.js"
+    ]
+}

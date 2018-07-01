@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "extension:dev": "rm -rf dist/development && webpack --config webpack.dev.config.js",
+    "extension:prod": "rm -rf dist/production && webpack --config webpack.prod.config.js"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "redux-saga-devtools": "^0.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
+  }
+}
