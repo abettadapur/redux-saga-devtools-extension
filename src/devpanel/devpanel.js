@@ -12,7 +12,7 @@ function renderDevTools(store) {
     const containerElement = document.getElementById("container");
     render(
         <Provider store={store}>
-            <SagaMonitorView />,
+            <SagaMonitorView />
         </Provider>,
         container
     );
