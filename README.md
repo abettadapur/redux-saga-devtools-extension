@@ -1,6 +1,7 @@
 Redux-Saga DevTools Chrome Extension
 ------------------------------------------
 Chrome Extension for Redux-Saga Devtools
+![alt-text](https://raw.githubusercontent.com/abettadapur/redux-saga-devtools-extension/master/readme.png)
 
 Usage
 --------------------------------
