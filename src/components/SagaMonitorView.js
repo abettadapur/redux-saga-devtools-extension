@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Row, Cell } from 'redux-saga-devtools/lib/components/Layout'
 import Dock from 'redux-saga-devtools/lib/components/Dock'
-import EffectView from 'redux-saga-devtools/lib/containers/EffectView'
+import EffectView from './EffectView'
 import ActionView from 'redux-saga-devtools/lib/containers/ActionView'
 import {
     SagaMonitorContainer,
