@@ -5,7 +5,7 @@ Chrome Extension for Redux-Saga Devtools
 
 Usage
 --------------------------------
-1. Install the extension from the Chrome marketplace
+1. Install the extension from the [Chrome marketplace](https://chrome.google.com/webstore/detail/kclmpmjofefcpjlommdpokoccidafnbi)
 2. When creating your saga middlware, pass the extension monitor to the middleware as an option
 ```js
 const monitor = window["__SAGA_MONITOR_EXTENSION__"]
