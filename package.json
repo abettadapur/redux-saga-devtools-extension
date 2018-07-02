@@ -4,6 +4,7 @@
     "extension:prod": "rm -rf dist/production && webpack --config webpack.prod.config.js"
   },
   "dependencies": {
+    "circular-json": "^0.5.4",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",

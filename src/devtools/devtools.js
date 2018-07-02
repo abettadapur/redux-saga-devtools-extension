@@ -1,5 +1,5 @@
 (function () {
-    chrome.devtools.panels.create("Redux Saga Dev Tools",
+    chrome.devtools.panels.create("Redux Saga",
         "",
         "panel.html",
         function (panel) {
