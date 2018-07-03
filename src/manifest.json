@@ -1,6 +1,6 @@
 {
     "name": "Redux Saga Dev Tools",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Redux saga dev tools",
     "manifest_version": 2,
     "devtools_page": "devtools.html",
