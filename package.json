@@ -9,7 +9,7 @@
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
-    "redux-saga-devtools": "^0.2.0",
+    "redux-saga-devtools": "^0.3.0",
     "styled-components": "^3.3.3"
   },
   "devDependencies": {

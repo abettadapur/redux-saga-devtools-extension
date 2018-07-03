@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Provider } from "react-redux";
 import { render, unmountComponentAtNode } from "react-dom";
-import SagaMonitorView from "../components/SagaMonitorView";
+import SagaMonitorView from "redux-saga-devtools/lib/containers/SagaMonitorView";
 import { Events } from "../constants";
 
 let rendered = false;
@@ -10,9 +10,10 @@ let backgroundConnection;
 
 function renderDevTools(store) {
     const containerElement = document.getElementById("container");
+    const useDark = chrome.devtools.panels.themeName === "dark";
     render(
         <Provider store={store}>
-            <SagaMonitorView />
+            <SagaMonitorView darkTheme={useDark} />
         </Provider>,
         container
     );
