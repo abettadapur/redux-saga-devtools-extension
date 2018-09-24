@@ -121,7 +121,7 @@ function serialize(effect) {
             return value;
         });
     }
-    catch (e: Error) {
+    catch (e) {
         if (e.message.indexOf("circular") >= 0) {
             return "[CIRCULAR OBJECT]";
         }
