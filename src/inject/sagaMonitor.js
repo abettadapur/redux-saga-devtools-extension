@@ -7,7 +7,6 @@ import {
     ACTION_DISPATCHED
 } from 'redux-saga-devtools/lib/store/constants'
 import { EVENT_SOURCE } from '../constants';
-import CircularJSON from "circular-json";
 
 function getTime() {
     if (performance && performance.now) {
@@ -107,19 +106,24 @@ function mapKeysDeep(object, cb) {
 
 function serialize(effect) {
     const fns = [];
-    const result = CircularJSON.stringify(effect, (key, value) => {
-        if (typeof value === "function") {
-            return { name: value.name };
+    try {
+        return JSON.stringify(effect, (key, value) => {
+            if (typeof value === "function") {
+                return { name: value.name };
+            }
+            if (value instanceof Error) {
+                return {
+                    message: value.message,
+                    name: value.name,
+                    stack: value.stack
+                };
+            }
+            return value;
+        });
+    }
+    catch (e: Error) {
+        if (e.message.indexOf("circular") >= 0) {
+            return "[CIRCULAR OBJECT]";
         }
-        if (value instanceof Error) {
-            return {
-                message: value.message,
-                name: value.name,
-                stack: value.stack
-            };
-        }
-        return value;
-    }, 0, '[Circular]');
-
-    return result;
+    }
 }
