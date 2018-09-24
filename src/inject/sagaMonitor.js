@@ -111,6 +111,11 @@ function serialize(effect) {
             if (typeof value === "function") {
                 return { name: value.name };
             }
+
+            if (key === "result") {
+                return serialize(value);
+            }
+
             if (value instanceof Error) {
                 return {
                     message: value.message,
